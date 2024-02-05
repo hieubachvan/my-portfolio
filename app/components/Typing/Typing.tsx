@@ -36,13 +36,16 @@ const TypingText: React.FC<TypingTextProps> = ({
     }, 100); // Thời gian giữa mỗi lần gõ
     return () => clearInterval(typing);
   }, [textArray, arrayIndex, charIndex]);
-  console.log(isDone);
+  // console.log(isDone);
 
   return (
-    <div className="whitespace-pre-wrap md:min-w-80" style={style}>
-      <p className=" md:text-4xl">
+    <div
+      className="whitespace-pre-wrap md:min-w-80 bg-black p-4 rounded-md shadow-xl"
+      style={style}
+    >
+      <p className=" md:text-4xl text-white">
         {content}
-        <span className={isDone ? "cursor" : ""}>|</span>
+        <span className={isDone ? "cursor" : ""}>_</span>
       </p>
     </div>
   );

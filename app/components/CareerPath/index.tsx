@@ -32,7 +32,7 @@ const carrerPath = [
 
 const CareerPath = () => {
   return (
-    <div className="bg-slate-200 md:py-40  p-10  flex justify-center">
+    <div className="bg-slate-200 md:py-20  p-10  flex justify-center">
       <div className="md:w-3/4">
         <Title content="Job History" />
         <p className="text-slate-600 md:w-3/4 mb-10 md:text-left text-justify ">

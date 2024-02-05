@@ -1,11 +1,13 @@
 import React from "react";
 import Divider from "../Divider";
 
-const Title = ({ content }: { content: string }) => {
+const Title = ({ content, center }: { content: string; center?: boolean }) => {
   return (
-    <div>
-      <p className="text-6xl font-extrabold">{content}</p>
-      <Divider />
+    <div className={center ? "text-center" : ""}>
+      <div>
+        <p className="text-6xl font-extrabold">{content}</p>
+        <Divider center={center} />
+      </div>
     </div>
   );
 };

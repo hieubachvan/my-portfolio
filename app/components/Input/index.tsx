@@ -1,6 +1,7 @@
 "use client";
 
 import clsx from "clsx";
+import React from "react";
 import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
 
 type InputProps = {
@@ -12,6 +13,7 @@ type InputProps = {
   errors: FieldErrors;
   disabled?: boolean;
   placeholder?: string;
+  styles?: React.CSSProperties;
 };
 
 const Input: React.FC<InputProps> = ({
@@ -23,7 +25,10 @@ const Input: React.FC<InputProps> = ({
   type = "text",
   disabled,
   placeholder,
+  styles,
 }) => {
+  console.log("Input", errors[id]);
+
   return (
     <div>
       <label
@@ -40,6 +45,7 @@ const Input: React.FC<InputProps> = ({
       </label>
       <div className="mt-2">
         <input
+          style={{ ...styles }}
           id={id}
           type={type}
           autoComplete={id}
@@ -66,10 +72,14 @@ const Input: React.FC<InputProps> = ({
             focus:ring-sky-600 
             sm:text-sm 
             sm:leading-6`,
-            errors[id] && "focus:ring-rose-500",
+            errors[id] && "focus:ring-red-500 border-red-500 border-2",
             disabled && "opacity-50 cursor-default"
           )}
         />
+
+        <div className="text-red-500 text-sm mt-1">
+          {errors[id] && `${label} is required`}
+        </div>
       </div>
     </div>
   );

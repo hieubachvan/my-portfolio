@@ -3,6 +3,7 @@ import IntroducingSession from "./components/IntroducingSession";
 import AboutMyself from "./components/AboutMyself";
 import CareerPath from "./components/CareerPath";
 import TechStacks from "./components/TechStacks";
+import ContactInfo from "./components/ContactInfo";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <AboutMyself />
         <CareerPath />
         <TechStacks />
+        <ContactInfo />
       </div>
     </div>
   );

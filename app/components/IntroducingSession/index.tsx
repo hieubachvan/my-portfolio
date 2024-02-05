@@ -8,18 +8,20 @@ import "./styles.css";
 const IntroducingSession = () => {
   const [done, setDone] = React.useState<boolean>(false);
   return (
-    <div className=" bg-slate-200 md:py-40 md:pb-0 p-10 pb-0">
-      <div className="flex gap-20">
-        <div className="w-1/2 flex justify-end">
-          <div>
+    <div
+      style={{ backgroundImage: "url('/images/background1.avif')" }}
+      className="bg-slate-200 md:py-30 md:pb-0 p-10 pb-0 flex justify-center"
+    >
+      <div className="flex gap-20 w-3/4">
+        <div className="w-1/2 flex md:pt-80 relative">
+          <div className="mb-10">
             <TypingText
               setDone={setDone}
               textArray={[
                 "Hello ___________",
                 "I AM HIEU BACHVAN",
                 "A software engineer",
-                "A web developer",
-                "And a programmer",
+                "And a web developer",
               ]}
             />
             {done && (
@@ -39,13 +41,24 @@ const IntroducingSession = () => {
             )}
           </div>
         </div>
-        <div className="w-1/2">
-          <Image
-            src="/images/avatar.PNG"
-            alt="hieubachvan"
-            width={300}
-            height={300}
-          />
+        <div className="w-1/2 relative">
+          {/* <div className="relative">
+            <div
+              style={{ top: "10%", right: "30%" }}
+              className=" absolute bg-slate-600 rounded-lg text-white p-4 text-lg"
+            >
+              Hi! it's me!
+            </div>
+          </div> */}
+          {done && (
+            <Image
+              className="button-slide-right"
+              src="/images/avatar.PNG"
+              alt="hieubachvan"
+              width={300}
+              height={300}
+            />
+          )}
         </div>
       </div>
     </div>

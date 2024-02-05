@@ -5,7 +5,7 @@ import Title from "../Tittle";
 const AboutMyself = () => {
   return (
     <div className="flex justify-center">
-      <div className="flex justify-center md:gap-10 md:py-40 md:w-3/4 p-10">
+      <div className="flex justify-center md:gap-10 md:py-20 md:w-3/4 p-10">
         <div className="w-1/2 bg-slate-400 relative rounded-xl md:block hidden">
           <div className="w-20 h-20 bg-slate-900"></div>
           <div className="w-40 h-40 bg-slate-900 bottom-0 right-0 absolute"></div>

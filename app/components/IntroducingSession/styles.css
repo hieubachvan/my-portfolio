@@ -12,3 +12,17 @@
   .button-slide-up {
     animation: slide-up 2s ease-out;
   }
+@keyframes slide-right {
+    0% {
+      opacity: 0;
+      transform: translateX(500px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .button-slide-right {
+    animation: slide-right 2s ease-out;
+  }
