@@ -21,7 +21,7 @@ const socialMedias = [
 const Footer = () => {
   return (
     <div className="bg-slate-500">
-      <div className=" flex sm:justify-center p-10 py-20">
+      <div className=" flex sm:justify-center p-10 md:py-20">
         <div className="md:w-full lg:w-3/4 md:p-10  md:flex gap-10">
           <BoxInfomations
             className="flex-1"
