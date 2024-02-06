@@ -27,7 +27,7 @@ const ContactInfo = () => {
 
   return (
     <div className="py-20 bg-slate-200 flex justify-center md:p-10">
-      <div className="w-3/4 ">
+      <div className=" md:w-full lg:w-3/4 w-full p-10">
         <div>
           <Title content="Get in touch" center={true} />
           <div className="md:flex w-full gap-10">

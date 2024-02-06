@@ -142,7 +142,9 @@ const techStackColors = [
 export function GridComponent() {
   // Tạo một mảng với 17 phần tử, mỗi phần tử là một số ngẫu nhiên từ 1 đến 4.
 
-  const gridSizes = _.times(17, () => _.random(1, 4));
+  // const gridSizes = _.times(17, () => _.random(1, 4));
+  const gridSizes = [3, 3, 1, 4, 1, 3, 2, 4, 4, 2, 3, 3, 4, 1, 2, 1, 3];
+  console.log(gridSizes);
 
   return (
     <div className="grid md:grid-cols-8 grid-cols-2 gap-4 border-2 p-4">
@@ -167,111 +169,9 @@ export function GridComponent() {
 const TechStacks = () => {
   return (
     <div className="flex md:py-20 p-10 justify-center">
-      <div className="md:w-3/4 w-full">
+      <div className="md:w-full lg:w-3/4 w-full">
         <Title content="Tech Stacks" />
-        {/* <div className="border-2 relative" style={{ height: "55vh" }}>
-          <TechStaskBox className="bg-blue-400 text-center py-10 px-52  right-2 top-2 rounded-md absolute">
-            <FaReact color="white" size={50} />
-            <p className="text-white">ReactJS</p>
-          </TechStaskBox>
-          <div
-            className="absolute flex gap-2 "
-            style={{ right: "1%", top: "34%" }}
-          >
-            <TechStaskBox className="bg-blue-400 text-center p-5 px-10 w-full  rounded-md">
-              <FaReact color="white" size={50} />
-              <p className="text-white">ReactJS</p>
-            </TechStaskBox>
-            <TechStaskBox className="bg-blue-400 text-center p-5 px-10  rounded-md">
-              <FaReact color="white" size={50} />
-              <p className="text-white">ReactJS</p>
-            </TechStaskBox>
-            <TechStaskBox className="bg-blue-400 text-center p-5 px-10  rounded-md">
-              <FaReact color="white" size={50} />
-              <p className="text-white">ReactJS</p>
-            </TechStaskBox>
-          </div>
-          <div
-            style={{ right: "1%", top: "59%" }}
-            className="absolute grid grid-cols-2 grid-rows-2 gap-4"
-          >
-            <TechStaskBox className="bg-blue-400 text-center p-2 px-11  rounded-md">
-              <FaReact color="white" size={50} />
-              <p className="text-white">ReactJS</p>
-            </TechStaskBox>
-            <TechStaskBox className="bg-blue-400 text-center p-2 px-11  rounded-md">
-              <FaReact color="white" size={50} />
-              <p className="text-white">ReactJS</p>
-            </TechStaskBox>
-            <TechStaskBox className="bg-blue-400 text-center p-2 px-11  rounded-md">
-              <FaReact color="white" size={50} />
-              <p className="text-white">ReactJS</p>
-            </TechStaskBox>
-            <TechStaskBox className="bg-blue-400 text-center p-2 px-11  rounded-md">
-              <FaReact color="white" size={50} />
-              <p className="text-white">ReactJS</p>
-            </TechStaskBox>
-          </div>
-          <div
-            style={{ top: "2%", left: "1%" }}
-            className="absolute flex gap-4"
-          >
-            <div className="flex flex-col gap-4">
-              <TechStaskBox className="bg-blue-400 text-center p-2 px-11  rounded-md">
-                <FaReact color="white" size={50} />
-                <p className="text-white">ReactJS</p>
-              </TechStaskBox>
-              <TechStaskBox className="bg-blue-400 text-center p-2 px-11  rounded-md">
-                <FaReact color="white" size={50} />
-                <p className="text-white">ReactJS</p>
-              </TechStaskBox>
-              <TechStaskBox className="bg-blue-400 text-center p-2 px-11  rounded-md">
-                <FaReact color="white" size={50} />
-                <p className="text-white">ReactJS</p>
-              </TechStaskBox>
-            </div>
-            <div className="flex flex-col gap-4">
-              <TechStaskBox className="bg-blue-400 text-center p-9 px-11  rounded-md">
-                <FaReact color="white" size={50} />
-                <p className="text-white">ReactJS</p>
-              </TechStaskBox>
-              <TechStaskBox className="bg-blue-400 text-center p-9 px-11  rounded-md">
-                <FaReact color="white" size={50} />
-                <p className="text-white">ReactJS</p>
-              </TechStaskBox>
-            </div>
-          </div>
-          <div style={{ top: "30%" }} className="flex gap-4 absolute">
-            <TechStaskBox className="bg-blue-400 text-center p-9 px-11  rounded-md">
-              <FaReact color="white" size={50} />
-              <p className="text-white">ReactJS</p>
-            </TechStaskBox>
-            <TechStaskBox className="bg-blue-400 text-center p-9 px-11  rounded-md">
-              <FaReact color="white" size={50} />
-              <p className="text-white">ReactJS</p>
-            </TechStaskBox>
-            <TechStaskBox className="bg-blue-400 text-center p-9 px-11  rounded-md">
-              <FaReact color="white" size={50} />
-              <p className="text-white">ReactJS</p>
-            </TechStaskBox>
-            <TechStaskBox className="bg-blue-400 text-center p-9 px-11  rounded-md">
-              <FaReact color="white" size={50} />
-              <p className="text-white">ReactJS</p>
-            </TechStaskBox>
-          </div>
-          <TechStaskBox
-            style={{ left: "34%", top: "2%" }}
-            className="bg-blue-400 text-center p-9 px-11  rounded-md absolute"
-          >
-            <FaReact color="white" size={50} />
-            <p className="text-white">ReactJS</p>
-          </TechStaskBox>
-        </div> */}
         <GridComponent />
-        {/* <div className="h-40 w-40 border-8 border-black mt-20 relative bg-slate-200">
-          <div className="absolute h-20 w-20 border-4 border-red-300"></div>
-          <div className="absolute h-20 w-20 border-4 border-blue-300 bottom-0 right-0"></div>
-        </div> */}
       </div>
     </div>
   );

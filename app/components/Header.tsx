@@ -11,9 +11,9 @@ interface HeaderProps {}
 const HEADER_ACTIONS: string[] = [
   "Home",
   "About",
-  "Projects",
+  "Job History",
+  "Tech Stacks",
   "Contact",
-  "Resume",
 ];
 
 const Header: React.FC<HeaderProps> = () => {
@@ -24,13 +24,15 @@ const Header: React.FC<HeaderProps> = () => {
 
   return (
     <div className="md:p-6 p-4 bg-slate-700 text-white fixed w-full font-bold flex justify-center z-20">
-      <div className="flex w-3/4 justify-between">
+      <div className="flex sm:w-3/4 md:w-full lg:w-3/4 w-full justify-between">
         <div className="md:text-2xl text-lg ">
           <p>Weelcome to my portfolio !</p>
         </div>
         <div className="md:flex  hidden  items-center gap-6 text-lg ">
           {HEADER_ACTIONS.map((action, index) => (
-            <div key={action}>{action}</div>
+            <a href={`#${action}`} key={action}>
+              {action}
+            </a>
           ))}
         </div>
         <div className="md:hidden flex items-center text-xl ml-auto">

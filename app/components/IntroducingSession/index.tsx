@@ -10,10 +10,10 @@ const IntroducingSession = () => {
   return (
     <div
       style={{ backgroundImage: "url('/images/background1.avif')" }}
-      className="bg-slate-200 md:py-30 md:pb-0 p-10 pb-0 flex justify-center"
+      className="bg-slate-200 md:py-30 md:pb-0 md:p-10 pb-0 pt-10 flex justify-center"
     >
-      <div className="flex gap-20 w-3/4">
-        <div className="w-1/2 flex md:pt-80 relative">
+      <div className="flex md:gap-20 md:w-full lg:w-3/4 px-5">
+        <div className="w-1/2 flex md:pt-20 lg:pt-80 relative">
           <div className="mb-10">
             <TypingText
               setDone={setDone}

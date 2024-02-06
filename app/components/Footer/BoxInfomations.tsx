@@ -21,7 +21,7 @@ const BoxInfomations: React.FC<BoxInfomationsProps> = ({
         {title}
       </p>
       {arrayContent.map((content, index) => (
-        <div className="flex gap-2 items-center" key={index}>
+        <div className="flex gap-2 items-center max-w-60" key={index}>
           {content.icon}
           <p className="text-gray-400">{content.content}</p>
         </div>
