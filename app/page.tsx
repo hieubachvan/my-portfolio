@@ -3,6 +3,7 @@ import AboutMyself from "./components/AboutMyself";
 import CareerPath from "./components/CareerPath";
 import TechStacks from "./components/TechStacks";
 import ContactInfo from "./components/ContactInfo";
+import ModalComponent from "./components/ModalComponent";
 
 export default function Home() {
   const executeScroll = (ref: any) =>

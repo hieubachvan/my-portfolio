@@ -25,25 +25,9 @@ const AboutMyself = () => {
             embrace new challenges and strive for excellence in all my
             endeavors.
           </p>
-          <div className="flex gap-5 mt-10 justify-between md:justify-start">
-            <Button
-              styles={{
-                minWidth: 130,
-                padding: 15,
-                fontSize: 20,
-                borderRadius: 25,
-              }}
-            >
-              More Info
-            </Button>
-            <Button
-              styles={{
-                minWidth: 130,
-                padding: 15,
-                fontSize: 20,
-                borderRadius: 25,
-              }}
-            >
+          <div className="flex gap-5 sm:mt-10 mt-5 md:justify-start">
+            <Button className=" sm:min-w-32 min-w-24">More Info</Button>
+            <Button className=" sm:min-w-32 min-w-24">
               <a href="/cv/Hieu-Bach-Van.pdf" download>
                 Resume
               </a>
