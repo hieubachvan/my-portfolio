@@ -1,36 +1,41 @@
-import React from "react";
+"use client";
+import React, { useContext } from "react";
 import Divider from "../Divider";
 import Title from "../Tittle";
 import JobInformations from "./JobInformations";
+import { ModalContext } from "@/app/untils/ModalProvider";
 
 const carrerPath = [
   {
     company_name: "CAAD",
     title: "Software engineer",
-    logo: "https://www.ca-adv.vn/wp-content/themes/site/assets/images/logo.png",
+    logo: "/images/caadLogo.webp",
     desc: "CA ADVANCE is one of the subsidiaries of the Cyber ​​Agent group, which is currently very developed in Japan. In 2014, CA ADVANCE opened its first foreign branch in Ho Chi Minh City - Vietnam. The company specializes in the field of Internet advertising, aiming to provide customers with the most modern and effective Internet Advertising services.",
   },
   {
     company_name: "VNG",
     title: "Software engineer",
-    logo: "https://vnggames.com/_next/image?url=%2Fassets%2Fimages%2Flogo.webp&w=2560&q=100",
+    logo: "/images/vngLogo.png",
     desc: "VNG Company (VNG) is a technology company established in 2004, specializing in digital content, online entertainment, social networking.",
   },
   {
     company_name: "Lucents",
     title: "Front-end developer",
-    logo: "https://lucents.xyz/vercel.png",
+    logo: "/images/lucentLogo.webp",
     desc: "Lucents Technology strives to deliver innovative and effective solutions to our customers by harnessing the power of cutting-edge technologies.",
   },
   {
     company_name: "Simicart",
     title: "Front-end developer",
-    logo: "https://www.simicart.com/pwa/static/media/simicart-logo.75850400.svg",
+    logo: "/images/simicartLogo.png",
     desc: "With over 10 years working in the eCommerce industry, we understand the difficulties customers and merchants are facing in buying and selling products online. We work hard every day with no purpose other than perfecting customer experience in online shopping and at the same time increase store owners' revenue.",
   },
 ];
 
 const CareerPath = () => {
+  const { openModal, setOpenModal } = useContext(ModalContext);
+  console.log(openModal, setOpenModal);
+
   return (
     <div className="bg-slate-200 md:py-20  p-10  flex justify-center">
       <div className="md:w-full lg:w-3/4">

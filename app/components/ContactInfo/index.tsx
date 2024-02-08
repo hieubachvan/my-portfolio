@@ -64,7 +64,7 @@ const ContactInfo = () => {
             </form>
             <div
               style={{
-                backgroundImage: "url('/bottom.jpeg')",
+                backgroundImage: "url('/bottom.webp')",
                 backgroundPosition: "25% 10%",
                 backgroundSize: "cover",
               }}

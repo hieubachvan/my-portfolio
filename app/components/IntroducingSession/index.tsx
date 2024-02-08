@@ -42,15 +42,7 @@ const IntroducingSession = () => {
           </div>
         </div>
         <div className="w-1/2 relative">
-          {/* <div className="relative">
-            <div
-              style={{ top: "10%", right: "30%" }}
-              className=" absolute bg-slate-600 rounded-lg text-white p-4 text-lg"
-            >
-              Hi! it's me!
-            </div>
-          </div> */}
-          {done && (
+          {/* {done && (
             <Image
               className="button-slide-right"
               src="/images/avatar.PNG"
@@ -58,7 +50,7 @@ const IntroducingSession = () => {
               width={300}
               height={300}
             />
-          )}
+          )} */}
         </div>
       </div>
     </div>

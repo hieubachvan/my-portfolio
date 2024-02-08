@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inconsolata } from "next/font/google";
 import "./globals.css";
 import MainLayout from "./layouts/MainLayout";
+import ModalProvider from "./untils/ModalProvider";
 
 const inconsolata = Inconsolata({ subsets: ["latin"] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inconsolata.className}>
-        <MainLayout>{children}</MainLayout>
+        <ModalProvider>
+          <MainLayout>{children}</MainLayout>
+        </ModalProvider>
       </body>
     </html>
   );

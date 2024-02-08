@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import "./styles.css";
+// import "./styles.css";
 import { FiAlignJustify } from "react-icons/fi";
 import Input from "../Input";
 import { useForm } from "react-hook-form";
@@ -27,7 +27,6 @@ const Header: React.FC<HeaderProps> = () => {
 
   return (
     <>
-      {/* {isOpen && ( */}
       <>
         <div
           className={clsx(
@@ -48,7 +47,6 @@ const Header: React.FC<HeaderProps> = () => {
           )}
         ></div>
       </>
-      {/* )} */}
 
       <div className="md:p-6 p-4 bg-slate-700 text-white fixed w-full font-bold flex justify-center z-20">
         <div className="flex sm:w-3/4 md:w-full lg:w-3/4 w-full justify-between">

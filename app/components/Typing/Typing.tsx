@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect, CSSProperties } from "react";
-import "./typing.css"; // Import file CSS
 interface TypingTextProps {
   textArray: string[];
   style?: CSSProperties;
@@ -45,7 +44,7 @@ const TypingText: React.FC<TypingTextProps> = ({
     >
       <p className=" md:text-4xl text-white">
         {content}
-        <span className={isDone ? "cursor" : ""}>_</span>
+        <span className={isDone ? "animate-blink" : "text-white"}>_</span>
       </p>
     </div>
   );

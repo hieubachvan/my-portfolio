@@ -12,6 +12,8 @@ const nextConfig = {
     extend: {},
   },
   plugins: [],
+  reactStrictMode: true,
+  experimental: { optimizeCss: true },
 };
 
 export default nextConfig;

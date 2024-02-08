@@ -8,8 +8,8 @@ const AboutMyself = () => {
       <div className="flex justify-center md:gap-10 md:py-20 md:w-full lg:w-3/4 p-10">
         <div className="w-1/2 bg-slate-400 relative rounded-xl md:block hidden">
           <div className="w-20 h-20 bg-slate-900"></div>
-          <div className="w-40 h-40 bg-slate-900 bottom-0 right-0 absolute animate-bounce rounded-full">
-            <div className="w-12 h-12 bg-slate-300 bottom-0 right-0 absolute animate-bounce rounded-full"></div>
+          <div className="w-40 h-40 bg-slate-900 bottom-0 right-0 absolute  rounded-full">
+            <div className="w-12 h-12 bg-slate-300 bottom-0 right-0 absolute  rounded-full"></div>
           </div>
         </div>
         <div className="md:w-1/2 w-full  text-justify">
