@@ -13,7 +13,10 @@ const ModalComponent = ({
   const { setOpenModal } = useContext(ModalContext);
   return (
     <>
-      <div className="sm:w-1/2 sm:h-1/2 w-80 h-3/4 fixed  flex items-center justify-start bg-white z-40 rounded-xl sm:top-1/4 sm:left-1/4 top-20 left-6 p-5">
+      <div
+        style={{ left: 30 }}
+        className="sm:w-1/2 sm:h-1/2 w-80 h-3/4 fixed  flex items-center justify-start bg-white z-40 rounded-xl sm:top-1/4 sm:left-1/4 top-20  p-5"
+      >
         <div>
           <div
             onClick={() => setOpenModal(false)}
