@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inconsolata } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import MainLayout from "./layouts/MainLayout";
 import ModalProvider from "./untils/ModalProvider";
 
-const inconsolata = Inconsolata({ subsets: ["latin"] });
+const workSans = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Hieu's portfolio",
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inconsolata.className}>
+      <body className={workSans.className}>
         <ModalProvider>
           <MainLayout>{children}</MainLayout>
         </ModalProvider>

@@ -5,7 +5,7 @@ const Title = ({ content, center }: { content: string; center?: boolean }) => {
   return (
     <div className={center ? "text-center" : ""}>
       <div>
-        <p className="md:text-4xl text-2xl font-extrabold">{content}</p>
+        <p className="md:text-4xl text-2xl font-bold">{content}</p>
         <Divider center={center} />
       </div>
     </div>
