@@ -1,34 +1,38 @@
-import IntroducingSession from "./components/IntroducingSession";
-import AboutMyself from "./components/AboutMyself";
-import CareerPath from "./components/CareerPath";
-import TechStacks from "./components/TechStacks";
-import ContactInfo from "./components/ContactInfo";
-import ModalComponent from "./components/ModalComponent";
+// import IntroducingSession from "./components/IntroducingSession";
+// import AboutMyself from "./components/AboutMyself";
+// import CareerPath from "./components/CareerPath";
+// import TechStacks from "./components/TechStacks";
+// import ContactInfo from "./components/ContactInfo";
+"use client";
+import dynamic from "next/dynamic";
+
+const IntroductionPage = dynamic(
+  () => import("./components/IntroducingSession")
+);
+const AboutMyselfPage = dynamic(() => import("./components/AboutMyself"));
+const CareerPathPage = dynamic(() => import("./components/CareerPath"));
+const TechStacksPage = dynamic(() => import("./components/TechStacks"));
+const ContactInfoPage = dynamic(() => import("./components/ContactInfo"));
 
 export default function Home() {
-  const executeScroll = (ref: any) =>
-    ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
-
   return (
     <div>
-      <div className="md:p-6 p-4 text-white  w-full font-bold flex h-30 ">
-        haha
-      </div>
+      <div className="md:p-6 p-4 text-white  w-full font-bold flex h-30 "></div>
       <div>
         <div id="Home">
-          <IntroducingSession />
+          <IntroductionPage />
         </div>
         <div id="About">
-          <AboutMyself />
+          <AboutMyselfPage />
         </div>
         <div id="Job History">
-          <CareerPath />
+          <CareerPathPage />
         </div>
         <div id="Tech Stacks">
-          <TechStacks />
+          <TechStacksPage />
         </div>
         <div id="Contact">
-          <ContactInfo />
+          <ContactInfoPage />
         </div>
       </div>
     </div>

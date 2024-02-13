@@ -18,6 +18,8 @@ import { SiRedux } from "react-icons/si";
 import { SiAdobephotoshop } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
 import { FaInvision } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export const TechStaskBox = ({
   children,
@@ -167,13 +169,33 @@ export function GridComponent() {
 }
 
 const TechStacks = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Thêm option này nếu bạn chỉ muốn animation chạy một lần
+  });
+
+  const variants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
   return (
-    <div className="flex md:py-20 p-10 justify-center">
-      <div className="md:w-full lg:w-3/4 w-full">
-        <Title content="Tech Stacks" />
-        <GridComponent />
+    <motion.section
+      ref={ref}
+      variants={variants}
+      initial="hidden"
+      animate={inView ? "show" : "hidden"}
+    >
+      <div className="flex md:py-20 p-10 justify-center lg:h-screen">
+        <div className="md:w-full lg:w-3/4 w-full">
+          <Title content="Tech Stacks" />
+          <GridComponent />
+        </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

@@ -9,9 +9,9 @@ const IntroducingSession = () => {
   return (
     <div
       style={{ backgroundImage: "url('/images/background1.avif')" }}
-      className="bg-slate-200 md:py-30 md:pb-0 md:p-10 pb-0 pt-10 flex justify-center"
+      className="bg-slate-200 md:py-30 md:pb-0 md:p-10 pb-0 pt-10 flex justify-center lg:h-screen h-96"
     >
-      <div className="flex md:gap-20 md:w-full lg:w-3/4 sm:px-0 px-10 w-full ">
+      <div className="flex md:gap-20 md:w-full lg:w-3/4 sm:px-0 px-10 w-full">
         <div className="sm:w-1/2 w-full flex md:pt-20 lg:pt-80 relative">
           <div className="mb-10">
             <TypingText

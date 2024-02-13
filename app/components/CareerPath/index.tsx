@@ -4,6 +4,8 @@ import Divider from "../Divider";
 import Title from "../Tittle";
 import JobInformations from "./JobInformations";
 import { ModalContext } from "@/app/untils/ModalProvider";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const carrerPath = [
   {
@@ -34,26 +36,45 @@ const carrerPath = [
 
 const CareerPath = () => {
   const { openModal, setOpenModal } = useContext(ModalContext);
-  console.log(openModal, setOpenModal);
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Thêm option này nếu bạn chỉ muốn animation chạy một lần
+  });
+
+  const variants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
 
   return (
-    <div className="bg-slate-200 md:py-20  p-10  flex justify-center">
-      <div className="md:w-full lg:w-3/4">
-        <Title content="Job History" />
-        <p className="text-slate-600 md:w-3/4 mb-10 md:text-left text-justify ">
-          With a passion for programming, I started working part-time for an
-          e-commerce company while still in school. Subsequently, I have been
-          associated with companies in the gaming and data sectors, among
-          others. Below is my work history and the titles I held at the
-          companies I've worked with.
-        </p>
-        <div className="grid md:grid-cols-2 md:grid-rows-2 grid-cols-1 grid-rows-1 gap-4">
-          {carrerPath.map((data, index) => (
-            <JobInformations key={index} data={data} />
-          ))}
+    <motion.section
+      ref={ref}
+      variants={variants}
+      initial="hidden"
+      animate={inView ? "show" : "hidden"}
+    >
+      <div className="bg-slate-200 md:py-20  p-10  flex justify-center lg:h-screen">
+        <div className="md:w-full lg:w-3/4">
+          <Title content="Job History" />
+          <p className="text-slate-600 md:w-3/4 mb-10 md:text-left text-justify ">
+            With a passion for programming, I started working part-time for an
+            e-commerce company while still in school. Subsequently, I have been
+            associated with companies in the gaming and data sectors, among
+            others. Below is my work history and the titles I held at the
+            companies I've worked with.
+          </p>
+          <div className="grid md:grid-cols-2 md:grid-rows-2 grid-cols-1 grid-rows-1 gap-4">
+            {carrerPath.map((data, index) => (
+              <JobInformations key={index} data={data} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 
